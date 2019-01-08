@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Home from './Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import StarsList from "./StarsList";
+import AstronomerEdit from "./AstronomerEdit";
 import StarEdit from "./StarEdit";
 
 class App extends Component {
@@ -11,7 +11,7 @@ class App extends Component {
             <Router>
                 <Switch>
                     <Route path='/' exact={true} component={Home}/>
-                    <Route path='/astronomer/:id' component={StarsList}/>;
+                    <Route path='/astronomer/:id' component={AstronomerEdit}/>;
                     <Route path='/star/:id' component={StarEdit}/>;
                 </Switch>
             </Router>
