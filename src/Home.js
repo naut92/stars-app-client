@@ -23,14 +23,14 @@ class Home extends Component {
 
     async componentDidMount() {
         if (this.props.match.params.id !== 'new') {
-            const stars = await (await fetch(`/stars`)).json();
+            const stars = await (await fetch(`/api/stars`)).json();
             this.setState({stars: stars});
         }
     }
 
     async remove(id) {
         const starId = this.props.match.params.id;
-        await fetch(`/stars/${starId}/${id}`, {
+        await fetch(`/api/stars/${starId}/${id}`, {
             method: 'DELETE',
             headers: {
                 'Accept': 'application/json',
